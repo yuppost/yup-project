@@ -33,15 +33,15 @@ const Footer = () => {
                   justifyContent={'center'}
                   alignItems={'center'}
                >
-                  <Link href="#">
+                  <Link href="https://t.me/WABOBSNews" target="_blank">
                      <FacebookOutlinedIcon
                         sx={{ color: '#FFF', widows: '20px' }}
                      />
                   </Link>
-                  <Link href="#">
+                  <Link href="https://facebook.com/wabobs2" target="_blank">
                      <TelegramIcon sx={{ color: '#FFF', widows: '20px' }} />
                   </Link>
-                  <Link href="#">
+                  <Link href="https://x.com/wabobs2" target="_blank">
                      <XIcon sx={{ color: '#FFF', widows: '20px' }} />
                   </Link>
                </Stack>
