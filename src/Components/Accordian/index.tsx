@@ -46,20 +46,14 @@ const Accordion = styled((props: AccordionProps) => (
 }));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
-   <MuiAccordionSummary
-      expandIcon={
-         <ArrowForwardIosSharpIcon
-            sx={{
-               fontSize: '0.9rem',
-               color: props.expanded ? '#fff' : '#000',
-            }}
-         />
-      }
-      {...props}
-   />
+   <MuiAccordionSummary {...props} />
 ))(({ theme }) => ({
    backgroundColor: 'rgba(0, 87, 163, 0.034)',
    flexDirection: 'row',
+   '& .MuiAccordionSummary-expandIconWrapper': {
+      transform: 'rotate(0deg)',
+      transition: 'transform 0.3s ease',
+   },
    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
       transform: 'rotate(90deg)',
    },
@@ -83,7 +77,6 @@ const AccordianComponent = () => {
       (panel: string) =>
       (event: React.SyntheticEvent, newExpanded: boolean) => {
          setExpanded(newExpanded ? panel : false);
-         event.preventDefault();
       };
 
    return (
@@ -97,21 +90,21 @@ const AccordianComponent = () => {
                <AccordionSummary
                   aria-controls="panel1d-content"
                   id="panel1d-header"
-                  expandIcon={
-                     <ArrowForwardIosSharpIcon
-                        sx={{
-                           fontSize: '0.9rem',
-                           color: expanded === item.panel ? '#fff' : '#000', // Arrow color change
-                        }}
-                     />
-                  }
                   sx={{
                      background:
                         expanded === item.panel
                            ? '#0057a3'
-                           : 'rgba(0, 87, 163, 0.034)', // Background color change
-                     color: expanded === item.panel ? '#fff' : '#000', // Text color change
+                           : 'rgba(0, 87, 163, 0.034)',
+                     color: expanded === item.panel ? '#fff' : '#000',
                   }}
+                  expandIcon={
+                     <ArrowForwardIosSharpIcon
+                        sx={{
+                           fontSize: '0.9rem',
+                           color: expanded === item.panel ? '#fff' : '#000',
+                        }}
+                     />
+                  }
                >
                   <Typography>{item.title}</Typography>
                </AccordionSummary>

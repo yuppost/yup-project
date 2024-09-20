@@ -5,7 +5,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import XIcon from '@mui/icons-material/X';
 
-import Logo from '../../../public/logo-footer.svg';
+import Logo from '/logo-footer.svg';
 
 const FooterStyle = styled('footer')({
    color: '#fff',
