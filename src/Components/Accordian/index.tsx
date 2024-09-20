@@ -81,7 +81,7 @@ const AccordianComponent = () => {
       };
 
    return (
-      <Box sx={{ marginTop: 8 }}>
+      <Box sx={{ marginTop: 8, marginBottom: 12 }}>
          {AccordianObject.map((item) => (
             <Accordion
                expanded={expanded === item.panel}
