@@ -12,7 +12,7 @@ import { Box } from '@mui/material';
 const AccordianObject = [
    {
       id: '1',
-      title: 'What is KOFIpost?',
+      title: 'What is KOFIPOST?',
       content:
          'KOFIPOST is an online news media platform, created by the WABOBS team. Now we are active on our Telegram channel. Soon, we will be active on Facebook, X, and other social media platforms.',
       panel: 'panel1',
@@ -21,14 +21,14 @@ const AccordianObject = [
       id: '2',
       title: 'Why is the name so weird?',
       content:
-         'lorem ipsum dolor sit amet. Lore mauris just et sapien et dolor.',
+         'It is! We have a big roadmap. KOFIPOST name is perfect for fulfilling our roadmap. It is going to be a big journey. We welcome you to our journey with your support.',
       panel: 'panel2',
    },
    {
       id: '3',
       title: 'How long will it take to launch KOFIPOST?',
       content:
-         'lorem ipsum dolor sit amet. Lore mauris just et sapien et dolor.',
+         'We are unsure. We lack the necessary resources and funds. However, our development and design team is working very hard. We hope to launch the website within a year.',
       panel: 'panel3',
    },
 ];
