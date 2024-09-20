@@ -45,21 +45,19 @@ const Accordion = styled((props: AccordionProps) => (
    },
 }));
 
-const AccordionSummary = styled(
-   (props: AccordionSummaryProps & { expanded: boolean }) => (
-      <MuiAccordionSummary
-         expandIcon={
-            <ArrowForwardIosSharpIcon
-               sx={{
-                  fontSize: '0.9rem',
-                  color: props.expanded ? '#fff' : '#000', // Arrow color based on expanded
-               }}
-            />
-         }
-         {...props}
-      />
-   )
-)(({ theme }) => ({
+const AccordionSummary = styled((props: AccordionSummaryProps) => (
+   <MuiAccordionSummary
+      expandIcon={
+         <ArrowForwardIosSharpIcon
+            sx={{
+               fontSize: '0.9rem',
+               color: props.expanded ? '#fff' : '#000',
+            }}
+         />
+      }
+      {...props}
+   />
+))(({ theme }) => ({
    backgroundColor: 'rgba(0, 87, 163, 0.034)',
    flexDirection: 'row',
    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
@@ -85,6 +83,7 @@ const AccordianComponent = () => {
       (panel: string) =>
       (event: React.SyntheticEvent, newExpanded: boolean) => {
          setExpanded(newExpanded ? panel : false);
+         event.preventDefault();
       };
 
    return (
