@@ -21,17 +21,29 @@ const Footer = () => {
          <Container maxWidth="lg">
             <Stack
                direction="row"
-               spacing={0.5}
+               spacing={'10px'}
                justifyContent={'center'}
                alignItems={'center'}
             >
-               <Link href="https://t.me/WABOBSNews" target="_blank">
+               <Link
+                  href="https://t.me/WABOBSNews"
+                  target="_blank"
+                  style={{ marginLeft: '0px' }}
+               >
                   <FaFacebookF className={FooterCSS.styledClass} />
                </Link>
-               <Link href="https://facebook.com/wabobs2" target="_blank">
+               <Link
+                  href="https://facebook.com/wabobs2"
+                  target="_blank"
+                  style={{ marginLeft: '0px' }}
+               >
                   <FaTelegramPlane className={FooterCSS.styledClass} />
                </Link>
-               <Link href="https://x.com/wabobs2" target="_blank">
+               <Link
+                  href="https://x.com/wabobs2"
+                  target="_blank"
+                  style={{ marginLeft: '0px' }}
+               >
                   <FaTwitter className={FooterCSS.styledClass} />
                </Link>
             </Stack>
