@@ -77,6 +77,7 @@ const AccordianComponent = () => {
       (panel: string) =>
       (event: React.SyntheticEvent, newExpanded: boolean) => {
          setExpanded(newExpanded ? panel : false);
+         event.preventDefault();
       };
 
    return (
